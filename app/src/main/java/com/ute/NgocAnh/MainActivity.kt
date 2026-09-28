@@ -5,16 +5,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import com.ute.NgocAnh.databinding.ActivityMainBinding
+import com.ute.NgocAnh.Model.Student
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-    }
+    private lateinit var binding: ActivityMainBinding
+    private val defaultStudent = Student(
+        id = "2415053122202",
+        name = "Huỳnh Ngọc Anh",
+        className = "24T2",
+        email = "2415053122202@ute.udn.vn",
+        gpa = 3.8
+    )
 }
