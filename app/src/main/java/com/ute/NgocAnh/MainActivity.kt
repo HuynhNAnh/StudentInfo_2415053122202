@@ -13,7 +13,16 @@ class MainActivity : AppCompatActivity() {
         id = "2415053122202",
         name = "Huỳnh Ngọc Anh",
         className = "24T2",
+        age = "20",
         email = "2415053122202@ute.udn.vn",
         gpa = 3.8
     )
+    private var currentStudent = defaultStudent
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        }
+
 }

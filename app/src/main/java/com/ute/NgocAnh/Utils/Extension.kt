@@ -4,6 +4,8 @@ import android.view.View
 import android.content.Context
 import android.widget.Toast
 import android.graphics.Color
+import com.ute.NgocAnh.Model.Student
+import java.util.jar.Attributes
 
 fun View.show() {
     visibility = View.VISIBLE
@@ -33,9 +35,17 @@ fun Double.toAcademicRanking(): String = when {
     else -> "Kém "
 }
 
-fun Double.toRankingColor(): Int = when { //thêm màu
+fun Double.toRankingColor(): Int = when {
     this >= 3.6 -> Color.parseColor("#34B469")
     this >= 3.2 -> Color.parseColor("#00BCD4")
     this >= 2.5 -> Color.parseColor("#FF9800")
     else -> Color.parseColor("#F44336")
+}
+fun Student.hienthi(){
+    println("Ma so: $id")
+    println("Ten: $name")
+    println("Lop: $className")
+    println("Tuoi: $age")
+    println("Email: $email")
+    println("Diem: $gpa")
 }
