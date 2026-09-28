@@ -7,9 +7,11 @@ data class Student(
     val name: String,
     val className: String,
     val email: String,
-    val gpa: Double
+    val gpa: Double,
+
 ) : Serializable {
 
-    val SVienSX: Boolean
-        get() = gpa >= 3.6
+    val SVienCheck: Boolean
+        get() = gpa >= 2
 }
+
